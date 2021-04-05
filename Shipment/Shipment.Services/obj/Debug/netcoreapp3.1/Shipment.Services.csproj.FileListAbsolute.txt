@@ -1,0 +1,15 @@
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\bin\Debug\netcoreapp3.1\Shipment.Services.deps.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\bin\Debug\netcoreapp3.1\Shipment.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\bin\Debug\netcoreapp3.1\Shipment.Services.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\bin\Debug\netcoreapp3.1\Shipment.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.xml
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\bin\Debug\netcoreapp3.1\Shipment.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\obj\Debug\netcoreapp3.1\Shipment.Services.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\obj\Debug\netcoreapp3.1\Shipment.Services.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\obj\Debug\netcoreapp3.1\Shipment.Services.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\obj\Debug\netcoreapp3.1\Shipment.Services.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\obj\Debug\netcoreapp3.1\Shipment.Services.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\obj\Debug\netcoreapp3.1\Shipment.Services.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Services\obj\Debug\netcoreapp3.1\Shipment.Services.pdb

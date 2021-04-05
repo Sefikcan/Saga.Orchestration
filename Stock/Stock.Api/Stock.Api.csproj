@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>34ebacd5-5739-4c3f-bed6-7d63bd1cc2e8</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Saga.Orchestration.Core\Saga.Orchestration.Core.csproj" />
+    <ProjectReference Include="..\Stock.Infrastructure\Stock.Infrastructure.csproj" />
+    <ProjectReference Include="..\Stock.Services\Stock.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

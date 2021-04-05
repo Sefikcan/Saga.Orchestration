@@ -1,0 +1,13 @@
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\bin\Debug\netcoreapp3.1\Order.Infrastructure.deps.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\bin\Debug\netcoreapp3.1\Order.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\bin\Debug\netcoreapp3.1\Order.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.xml
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\obj\Debug\netcoreapp3.1\Order.Infrastructure.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\obj\Debug\netcoreapp3.1\Order.Infrastructure.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\obj\Debug\netcoreapp3.1\Order.Infrastructure.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\obj\Debug\netcoreapp3.1\Order.Infrastructure.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\obj\Debug\netcoreapp3.1\Order.Infrastructure.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\obj\Debug\netcoreapp3.1\Order.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Order\Order.Infrastructure\obj\Debug\netcoreapp3.1\Order.Infrastructure.pdb

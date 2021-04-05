@@ -1,0 +1,9 @@
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\bin\Debug\netcoreapp3.1\Saga.Consumer.deps.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\bin\Debug\netcoreapp3.1\Saga.Consumer.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\bin\Debug\netcoreapp3.1\Saga.Consumer.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\obj\Debug\netcoreapp3.1\Saga.Consumer.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\obj\Debug\netcoreapp3.1\Saga.Consumer.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\obj\Debug\netcoreapp3.1\Saga.Consumer.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\obj\Debug\netcoreapp3.1\Saga.Consumer.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\obj\Debug\netcoreapp3.1\Saga.Consumer.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Consumer\obj\Debug\netcoreapp3.1\Saga.Consumer.pdb

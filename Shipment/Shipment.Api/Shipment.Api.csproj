@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <UserSecretsId>8b57e31d-5f5c-41ba-ba25-e5b5627e0edc</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.10.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Saga.Orchestration.Core\Saga.Orchestration.Core.csproj" />
+    <ProjectReference Include="..\Shipment.Infrastructure\Shipment.Infrastructure.csproj" />
+    <ProjectReference Include="..\Shipment.Services\Shipment.Services.csproj" />
+  </ItemGroup>
+
+
+</Project>

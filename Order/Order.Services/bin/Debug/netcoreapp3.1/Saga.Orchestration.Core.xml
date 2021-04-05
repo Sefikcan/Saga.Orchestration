@@ -1,0 +1,268 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Saga.Orchestration.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Saga.Orchestration.Core.Constants.BaseConstants">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Orchestration.Core.Constants.BaseConstants.SAGAQUEUENAME">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Entity.IEntity">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Enums.OrderStatus">
+            <summary>
+            Order Status 
+            </summary>
+        </member>
+        <member name="F:Saga.Orchestration.Core.Enums.OrderStatus.Pending">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Orchestration.Core.Enums.OrderStatus.Shipped">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Orchestration.Core.Enums.OrderStatus.Failed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Orchestration.Core.Enums.OrderStatus.Success">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Enums.ShipmentType">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Orchestration.Core.Enums.ShipmentType.MNG">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Saga.Orchestration.Core.Enums.ShipmentType.Yurtici">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Extensions.RegisterCoreExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Orchestration.Core.Extensions.RegisterCoreExtensions.AddCore(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Extensions.SwaggerExtensions">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Orchestration.Core.Extensions.SwaggerExtensions.AddSwagger(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Saga.Orchestration.Core.Extensions.SwaggerExtensions.UseSwagger(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            
+            </summary>
+            <param name="app"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Mappings.Abstract.IMapping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Orchestration.Core.Mappings.Abstract.IMapping.Map``2(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Mappings.Concrete.Mapster.MapsterMapping">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Orchestration.Core.Mappings.Concrete.Mapster.MapsterMapping.Map``2(``0)">
+            <summary>
+            
+            </summary>
+            <typeparam name="TSource"></typeparam>
+            <typeparam name="TDestination"></typeparam>
+            <param name="source"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Orchestration.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.BusConfigurator">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.BusConfigurator.Instance">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Orchestration.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit.BusConfigurator.ConfigureBus(Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings,System.Action{MassTransit.RabbitMqTransport.IRabbitMqBusFactoryConfigurator})">
+            <summary>
+            
+            </summary>
+            <param name="massTransitSettings"></param>
+            <param name="action"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Saga.Orchestration.Core.MessageBrokers.Models.EventModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:Saga.Orchestration.Core.MessageBrokers.Models.EventModel.#ctor">
+            <summary>
+            ctor
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.MessageBrokers.Models.EventModel.CorrelationId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.MessageBrokers.Models.EventModel.CreatedDate">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Settings.Abstract.ISettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Settings.Concrete.Databases.OrderDbSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.Databases.OrderDbSettings.ConnectionStrings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Settings.Concrete.Databases.ShipmentDbSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.Databases.ShipmentDbSettings.ConnectionStrings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Settings.Concrete.Databases.StockDbSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.Databases.StockDbSettings.ConnectionStrings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.Uri">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.UserName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.Password">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.TripThreshold">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.ActiveThreshold">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.ResetInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.RateLimit">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.RateLimiterInterval">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.TrackingPeriod">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.MessageRetryCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Settings.Concrete.SwaggerSettings">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.SwaggerSettings.VersionName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.SwaggerSettings.RoutePrefix">
+            <summary>
+            
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,13 @@
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\obj\Debug\netcoreapp3.1\Saga.Orchestration.Shared.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\obj\Debug\netcoreapp3.1\Saga.Orchestration.Shared.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\obj\Debug\netcoreapp3.1\Saga.Orchestration.Shared.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\obj\Debug\netcoreapp3.1\Saga.Orchestration.Shared.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\bin\Debug\netcoreapp3.1\Saga.Orchestration.Shared.deps.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\bin\Debug\netcoreapp3.1\Saga.Orchestration.Shared.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\bin\Debug\netcoreapp3.1\Saga.Orchestration.Shared.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.xml
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\obj\Debug\netcoreapp3.1\Saga.Orchestration.Shared.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\obj\Debug\netcoreapp3.1\Saga.Orchestration.Shared.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Shared\obj\Debug\netcoreapp3.1\Saga.Orchestration.Shared.pdb

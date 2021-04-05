@@ -1,0 +1,13 @@
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\bin\Debug\netcoreapp3.1\Shipment.Infrastructure.deps.json
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\bin\Debug\netcoreapp3.1\Shipment.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\bin\Debug\netcoreapp3.1\Shipment.Infrastructure.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.xml
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\obj\Debug\netcoreapp3.1\Shipment.Infrastructure.csprojAssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\obj\Debug\netcoreapp3.1\Shipment.Infrastructure.AssemblyInfoInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\obj\Debug\netcoreapp3.1\Shipment.Infrastructure.AssemblyInfo.cs
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\obj\Debug\netcoreapp3.1\Shipment.Infrastructure.csproj.CoreCompileInputs.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\obj\Debug\netcoreapp3.1\Shipment.Infrastructure.csproj.CopyComplete
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\obj\Debug\netcoreapp3.1\Shipment.Infrastructure.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Infrastructure\obj\Debug\netcoreapp3.1\Shipment.Infrastructure.pdb
