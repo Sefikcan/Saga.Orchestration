@@ -20,8 +20,6 @@ namespace Order.Saga.Consumer.Concrete
 
         public State Processed { get; set; }
 
-        public State Failed { get; set; }
-
         #endregion
 
         #region Events
