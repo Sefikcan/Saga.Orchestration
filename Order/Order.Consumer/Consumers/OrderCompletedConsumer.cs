@@ -26,6 +26,8 @@ namespace Order.Consumer.Consumers
                     OrderId = order.Id
                 });
 
+                // TODO: Update stock event model added
+
                 throw new System.Exception("Order not found!");
             }
 

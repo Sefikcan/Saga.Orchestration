@@ -20,6 +20,8 @@ namespace Order.Saga.Consumer.Concrete
 
         public State Processed { get; set; }
 
+        public State Failed { get; set; }
+
         #endregion
 
         #region Events
@@ -50,7 +52,6 @@ namespace Order.Saga.Consumer.Concrete
             //int bir alana correlationid set etme işlemini gerçekleştirir.Bu id'de otomatik olarak diğer steplerde kullanılmak üzere otomatik set edilir.
 
             //Eventlerimze akışta takip edebileceğimiz correlationid bilgisini set ediyoruz.
-
             Event(() => OrderCreated,
               c => c.CorrelateById(s => s.Message.CorrelationId));
 
@@ -85,27 +86,39 @@ namespace Order.Saga.Consumer.Concrete
             During(Received,
                 When(OrderCreated)
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order created event triggered."))
-                .TransitionTo(Created)
-                .Finalize());
+                .TransitionTo(Created));
 
             During(Created,
                 When(UpdateStock)
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} update stock event triggered."))
                 .TransitionTo(ChangeStock)
+                .Finalize(),
+                When(OrderFailed)
+                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} stock update failed."))
+                .TransitionTo(Failed)
                 .Finalize());
+
             // During araya girme işlemini yapar. Burada event tetiklendikten sonra console'a ilgili event'in tetiklendiği bilgisini yazıp, Finalize ile tüm akışı sonlandırıyoruz.
 
             During(ChangeStock,
                When(CreateShipment)
                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create shipping event triggered."))
                .TransitionTo(Shipping)
-               .Finalize());
+               .Finalize(),
+                When(OrderFailed)
+                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create shipping failed."))
+                .TransitionTo(Failed)
+                .Finalize());
 
             During(Shipping,
                When(OrderCompleted)
                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order completed event triggered."))
                .TransitionTo(Processed)
-               .Finalize());
+               .Finalize(),
+                When(OrderFailed)
+                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create order failed."))
+                .TransitionTo(Failed)
+                .Finalize());
 
             SetCompletedWhenFinalized(); // Akışımızdaki tüm işlemlerin bittiğini saga'ya belirtir ve ilgili instance repo üzerinden otomatik olarak silinir.
 

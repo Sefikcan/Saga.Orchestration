@@ -8,7 +8,6 @@ using Saga.Orchestration.Core.Enums;
 using Saga.Orchestration.Core.Mappings.Abstract;
 using Saga.Orchestration.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit;
 using Saga.Orchestration.Core.Settings.Concrete.MessageBrokers;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Order;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Sagas.Order;
 using System;
 using System.Threading;
@@ -63,10 +62,7 @@ namespace Order.Services.Commands
             }
             else
             {
-                await _sendEndpoint.Send(new OrderFailedEventModel
-                {
-                    OrderId = order.Id
-                });
+                throw new Exception("Create Order Failed!");
             }
 
             return _mapping.Map<Infrastructure.Entities.Order, CreateOrderResponseModel>(response.Entity);

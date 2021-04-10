@@ -18,6 +18,7 @@ namespace Shipment.Consumer.Consumers
 
         public async Task Consume(ConsumeContext<CreateShipmentEventModel> context)
         {
+            //Failed işlemi için örnek bir senaryo
             if (context.Message.ShipmentType == (int)ShipmentType.MNG || context.Message.ShipmentType == (int)ShipmentType.Yurtici)
             {
                 await context.Publish(new OrderCompletedEventModel
@@ -31,6 +32,8 @@ namespace Shipment.Consumer.Consumers
                 {
                     OrderId = context.Message.OrderId
                 });
+
+                //TODO: Add StockDecrease event publish
             }
 
             var shipment = new Infrastructure.Entities.Shipment
@@ -46,6 +49,8 @@ namespace Shipment.Consumer.Consumers
                 {
                     OrderId = context.Message.OrderId
                 });
+
+                //TODO: Add StockDecrease event publish
             }
         }
     }
