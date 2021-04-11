@@ -9,7 +9,7 @@ namespace Order.Consumer.Consumers
     {
         public async Task Consume(ConsumeContext<IOrderCreatedEventModel> context)
         {
-            await context.Publish(new UpdateStockEventModel 
+            await context.Publish<IUpdateStockEventModel>(new UpdateStockEventModel 
             {
                 OrderId = context.Message.OrderId,
                 ProductId = context.Message.ProductId,

@@ -86,35 +86,22 @@ namespace Order.Saga.Consumer.Concrete
             During(Received,
                 When(OrderCreated)
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order created event triggered."))
-                .TransitionTo(Created));
-
-            During(Created,
+                .TransitionTo(Created),
                 When(UpdateStock)
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} update stock event triggered."))
-                .TransitionTo(ChangeStock)
-                .Finalize(),
+                .TransitionTo(ChangeStock),
                 When(OrderFailed)
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} stock update failed."))
-                .TransitionTo(Failed)
-                .Finalize());
-
-            // During araya girme işlemini yapar. Burada event tetiklendikten sonra console'a ilgili event'in tetiklendiği bilgisini yazıp, Finalize ile tüm akışı sonlandırıyoruz.
-
-            During(ChangeStock,
-               When(CreateShipment)
-               .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create shipping event triggered."))
-               .TransitionTo(Shipping)
-               .Finalize(),
+                .TransitionTo(Failed),
+                When(CreateShipment)
+                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create shipping event triggered."))
+                .TransitionTo(Shipping),
                 When(OrderFailed)
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create shipping failed."))
-                .TransitionTo(Failed)
-                .Finalize());
-
-            During(Shipping,
-               When(OrderCompleted)
-               .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order completed event triggered."))
-               .TransitionTo(Processed)
-               .Finalize(),
+                .TransitionTo(Failed),
+                When(OrderCompleted)
+                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order completed event triggered."))
+                .TransitionTo(Processed),
                 When(OrderFailed)
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create order failed."))
                 .TransitionTo(Failed)

@@ -1,13 +1,13 @@
 ﻿using MassTransit;
 using Saga.Orchestration.Core.Enums;
+using Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Order;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Shipment;
 using Shipment.Infrastructure.DataAccess.EntityFramework;
 using System.Threading.Tasks;
 
 namespace Shipment.Consumer.Consumers
 {
-    public class CreateShipmentConsumer : IConsumer<CreateShipmentEventModel>
+    public class CreateShipmentConsumer : IConsumer<ICreateShipmentEventModel>
     {
         private readonly ShipmentDbContext _dbContext;
 
@@ -16,19 +16,19 @@ namespace Shipment.Consumer.Consumers
             _dbContext = dbContext;
         }
 
-        public async Task Consume(ConsumeContext<CreateShipmentEventModel> context)
+        public async Task Consume(ConsumeContext<ICreateShipmentEventModel> context)
         {
             //Failed işlemi için örnek bir senaryo
             if (context.Message.ShipmentType == (int)ShipmentType.MNG || context.Message.ShipmentType == (int)ShipmentType.Yurtici)
             {
-                await context.Publish(new OrderCompletedEventModel
+                await context.Publish<IOrderCompletedEventModel>(new OrderCompletedEventModel
                 {
                     OrderId = context.Message.OrderId
                 });
             }
             else
             {
-                await context.Publish(new OrderFailedEventModel
+                await context.Publish<IOrderFailedEventModel>(new OrderFailedEventModel
                 {
                     OrderId = context.Message.OrderId
                 });
@@ -45,7 +45,7 @@ namespace Shipment.Consumer.Consumers
             await _dbContext.AddAsync(shipment);
             if (await _dbContext.SaveChangesAsync()<=0)
             {
-                await context.Publish(new OrderFailedEventModel
+                await context.Publish<IOrderFailedEventModel>(new OrderFailedEventModel
                 {
                     OrderId = context.Message.OrderId
                 });
