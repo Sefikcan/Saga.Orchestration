@@ -1,7 +1,6 @@
 ﻿using MassTransit;
 using Saga.Orchestration.Core.Enums;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Order;
 using Shipment.Infrastructure.DataAccess.EntityFramework;
 using System.Threading.Tasks;
 
@@ -21,16 +20,16 @@ namespace Shipment.Consumer.Consumers
             //Failed işlemi için örnek bir senaryo
             if (context.Message.ShipmentType == (int)ShipmentType.MNG || context.Message.ShipmentType == (int)ShipmentType.Yurtici)
             {
-                await context.Publish<IOrderCompletedEventModel>(new OrderCompletedEventModel
+                await context.Publish<IOrderCompletedEventModel>(new
                 {
-                    OrderId = context.Message.OrderId
+                    context.Message.OrderId
                 });
             }
             else
             {
-                await context.Publish<IOrderFailedEventModel>(new OrderFailedEventModel
+                await context.Publish<IOrderFailedEventModel>(new
                 {
-                    OrderId = context.Message.OrderId
+                    context.Message.OrderId
                 });
 
                 //TODO: Add StockDecrease event publish
@@ -45,9 +44,9 @@ namespace Shipment.Consumer.Consumers
             await _dbContext.AddAsync(shipment);
             if (await _dbContext.SaveChangesAsync()<=0)
             {
-                await context.Publish<IOrderFailedEventModel>(new OrderFailedEventModel
+                await context.Publish<IOrderFailedEventModel>(new
                 {
-                    OrderId = context.Message.OrderId
+                    context.Message.OrderId
                 });
 
                 //TODO: Add StockDecrease event publish

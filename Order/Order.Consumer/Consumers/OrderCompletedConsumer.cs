@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Order.Infrastructure.DataAccess.EntityFramework;
 using Saga.Orchestration.Core.Enums;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Order;
 using System.Threading.Tasks;
 
 namespace Order.Consumer.Consumers
@@ -22,7 +21,7 @@ namespace Order.Consumer.Consumers
             var order = await _dbContext.Orders.FirstOrDefaultAsync(x => x.Id == context.Message.OrderId);
             if (order == null)
             {
-                await context.Publish<IOrderFailedEventModel>(new OrderFailedEventModel
+                await context.Publish<IOrderFailedEventModel>(new
                 {
                     OrderId = order.Id
                 });

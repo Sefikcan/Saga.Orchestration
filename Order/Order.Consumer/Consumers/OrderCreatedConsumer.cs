@@ -1,6 +1,6 @@
 ﻿using MassTransit;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Stock;
+using System;
 using System.Threading.Tasks;
 
 namespace Order.Consumer.Consumers
@@ -9,11 +9,12 @@ namespace Order.Consumer.Consumers
     {
         public async Task Consume(ConsumeContext<IOrderCreatedEventModel> context)
         {
-            await context.Publish<IUpdateStockEventModel>(new UpdateStockEventModel 
+            await context.Publish<IUpdateStockEventModel>(new 
             {
-                OrderId = context.Message.OrderId,
-                ProductId = context.Message.ProductId,
-                Quantity = context.Message.Quantity
+                CorrelationId = context.CorrelationId ?? Guid.Empty,
+                context.Message.OrderId,
+                context.Message.ProductId,
+                context.Message.Quantity
             });
         }
     }

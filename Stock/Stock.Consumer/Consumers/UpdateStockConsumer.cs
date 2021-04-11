@@ -2,8 +2,6 @@
 using Microsoft.EntityFrameworkCore;
 using Saga.Orchestration.Core.Enums;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Order;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Shipment;
 using Stock.Infrastructure.DataAccess.EntityFramework;
 using System;
 using System.Threading.Tasks;
@@ -24,9 +22,9 @@ namespace Stock.Consumer.Consumers
             var stock = await _dbContext.Stocks.FirstOrDefaultAsync(x => x.ProductId == context.Message.ProductId);
             if (stock == null)
             {
-                await context.Publish<IOrderFailedEventModel>(new OrderFailedEventModel
+                await context.Publish<IOrderFailedEventModel>(new
                 {
-                    OrderId = context.Message.OrderId
+                    context.Message.OrderId
                 });
 
                 throw new Exception("Product not found!");
@@ -35,9 +33,9 @@ namespace Stock.Consumer.Consumers
             stock.Quantity -= context.Message.Quantity;
             if (stock.Quantity < 0)
             {
-                await context.Publish<IOrderFailedEventModel>(new OrderFailedEventModel
+                await context.Publish<IOrderFailedEventModel>(new
                 {
-                    OrderId = context.Message.OrderId
+                    context.Message.OrderId
                 });
 
                 throw new Exception("Quantity must be greater than or equal to zero!");
@@ -47,17 +45,17 @@ namespace Stock.Consumer.Consumers
             _dbContext.Entry(stock).Property(x => x.Quantity).IsModified = true;
             if (await _dbContext.SaveChangesAsync()>0)
             {
-                await context.Publish<ICreateShipmentEventModel>(new CreateShipmentEventModel
+                await context.Publish<ICreateShipmentEventModel>(new
                 {
-                    OrderId = context.Message.OrderId,
+                    context.Message.OrderId,
                     ShipmentType = (int)ShipmentType.MNG
                 });
             }
             else
             {
-                await context.Publish<IOrderFailedEventModel>(new OrderFailedEventModel
+                await context.Publish<IOrderFailedEventModel>(new
                 {
-                    OrderId = context.Message.OrderId
+                    context.Message.OrderId
                 });
             }
         }

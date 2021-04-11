@@ -4,8 +4,8 @@ namespace Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract
 {
     public interface IOrderFailedEventModel
     {
-        public Guid CorrelationId { get; set; }
+        public Guid CorrelationId { get; }
 
-        public int OrderId { get; set; }
+        public int OrderId { get; }
     }
 }

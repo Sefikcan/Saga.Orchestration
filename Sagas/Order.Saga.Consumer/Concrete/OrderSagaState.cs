@@ -2,6 +2,8 @@
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Order;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Sagas.Order;
+using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Shipment;
+using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Stock;
 using System;
 
 namespace Order.Saga.Consumer.Concrete
@@ -83,27 +85,71 @@ namespace Order.Saga.Consumer.Concrete
                 .TransitionTo(Received)
                 );
 
+            //Order Received sonrası tetiklenecek akış
             During(Received,
-                When(OrderCreated)
-                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order created event triggered."))
-                .TransitionTo(Created),
+                  When(OrderCreated)
+                  .Then(ctx=> 
+                  {
+                      ctx.Instance.OrderId = ctx.Data.OrderId;
+                      ctx.Instance.ProductId = ctx.Data.ProductId;
+                      ctx.Instance.Quantity = ctx.Data.Quantity;
+                  })
+                  .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order created event triggered."))
+                  .Publish(ctx=> new UpdateStockEventModel(ctx.Instance))
+                  .TransitionTo(Created));
+
+            //Order Created sonrası tetiklenecek akış
+            During(Created,
                 When(UpdateStock)
+                  .Then(ctx =>
+                  {
+                      ctx.Instance.OrderId = ctx.Data.OrderId;
+                  })
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} update stock event triggered."))
+                .Publish(ctx => new CreateShipmentEventModel(ctx.Instance))
                 .TransitionTo(ChangeStock),
                 When(OrderFailed)
+                .Then(ctx=> 
+                {
+                    ctx.Instance.OrderId = ctx.Data.OrderId;
+                })
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} stock update failed."))
-                .TransitionTo(Failed),
-                When(CreateShipment)
-                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create shipping event triggered."))
-                .TransitionTo(Shipping),
-                When(OrderFailed)
+                .Publish(ctx => new OrderFailedEventModel(ctx.Instance))
+                .TransitionTo(Failed));
+
+            // During araya girme işlemini yapar. Burada event tetiklendikten sonra console'a ilgili event'in tetiklendiği bilgisini yazıp, Finalize ile tüm akışı sonlandırıyoruz.
+
+            //Change Stock sonrası tetiklenecek akış
+            During(ChangeStock,
+               When(CreateShipment)
+               .Then(ctx =>
+               {
+                   ctx.Instance.OrderId = ctx.Data.OrderId;
+               })
+               .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create shipping event triggered."))
+               .Publish(ctx => new OrderCompletedEventModel(ctx.Instance))
+               .TransitionTo(Shipping),
+               When(OrderFailed)
+               .Then(ctx =>
+                {
+                    ctx.Instance.OrderId = ctx.Data.OrderId;
+                })
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create shipping failed."))
-                .TransitionTo(Failed),
-                When(OrderCompleted)
-                .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order completed event triggered."))
-                .TransitionTo(Processed),
+                .Publish(ctx => new OrderFailedEventModel(ctx.Instance))
+                .TransitionTo(Failed));
+
+            During(Shipping,
+               When(OrderCompleted)
+               .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} order completed event triggered."))
+               .TransitionTo(Processed)
+               .Finalize(),
                 When(OrderFailed)
+                .Then(ctx =>
+                {
+                    ctx.Instance.OrderId = ctx.Data.OrderId;
+                })
                 .ThenAsync(ctx => Console.Out.WriteLineAsync($"{ctx.Data.OrderId} create order failed."))
+                .Publish(ctx => new OrderFailedEventModel(ctx.Instance))
                 .TransitionTo(Failed)
                 .Finalize());
 

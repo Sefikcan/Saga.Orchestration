@@ -4,10 +4,10 @@ namespace Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract
 {
     public interface ICreateShipmentEventModel
     {
-        public Guid CorrelationId { get; set; }
+        public Guid CorrelationId { get; }
 
-        public int OrderId { get; set; }
+        public int OrderId { get; }
 
-        public int ShipmentType { get; set; }
+        public int ShipmentType { get; }
     }
 }

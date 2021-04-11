@@ -3,7 +3,6 @@ using Microsoft.EntityFrameworkCore;
 using Order.Infrastructure.DataAccess.EntityFramework;
 using Saga.Orchestration.Core.Enums;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Abstract;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Order;
 using System.Threading.Tasks;
 
 namespace Order.Consumer.Consumers

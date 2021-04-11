@@ -33,12 +33,6 @@ namespace Stock.Api.Controllers
             return Ok(response);
         }
 
-        [HttpGet]
-        public async Task<IActionResult> Test()
-        {
-            return Ok();
-        }
-
         /// <summary>
         /// Decrease Stock Operation
         /// </summary>
