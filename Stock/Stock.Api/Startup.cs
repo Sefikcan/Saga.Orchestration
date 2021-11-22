@@ -22,6 +22,7 @@ namespace Stock.Api
         {
             services.AddCore(Configuration)
                                 .AddSwagger(Configuration)
+                                .AddJaeger(Configuration)
                                 .AddStockInfra(Configuration)
                                 .AddServices();
 

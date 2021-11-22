@@ -22,6 +22,7 @@ namespace Order.Api
         {
             services.AddCore(Configuration)
                                 .AddSwagger(Configuration)
+                                .AddJaeger(Configuration)
                                 .AddOrderInfra(Configuration)
                                 .AddServices(Configuration);
 

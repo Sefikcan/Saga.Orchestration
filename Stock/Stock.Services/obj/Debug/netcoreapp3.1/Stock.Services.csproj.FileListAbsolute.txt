@@ -6,10 +6,11 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\bin
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.pdb
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.xml
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\bin\Debug\netcoreapp3.1\Stock.Infrastructure.pdb
-D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.csprojAssemblyReference.cache
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.AssemblyInfoInputs.cache
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.AssemblyInfo.cs
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.csproj.CoreCompileInputs.cache
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.csproj.CopyComplete
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.dll
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.csproj.AssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Services\obj\Debug\netcoreapp3.1\Stock.Services.GeneratedMSBuildEditorConfig.editorconfig

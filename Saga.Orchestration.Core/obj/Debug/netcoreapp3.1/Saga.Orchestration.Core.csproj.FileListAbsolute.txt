@@ -8,3 +8,4 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Core\
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Core\obj\Debug\netcoreapp3.1\Saga.Orchestration.Core.dll
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Core\obj\Debug\netcoreapp3.1\Saga.Orchestration.Core.xml
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Core\obj\Debug\netcoreapp3.1\Saga.Orchestration.Core.pdb
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Saga.Orchestration.Core\obj\Debug\netcoreapp3.1\Saga.Orchestration.Core.GeneratedMSBuildEditorConfig.editorconfig

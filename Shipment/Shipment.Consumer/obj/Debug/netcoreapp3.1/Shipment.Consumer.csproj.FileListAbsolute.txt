@@ -66,7 +66,6 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consum
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Shipment.Infrastructure.pdb
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.pdb
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Saga.Orchestration.Core.xml
-D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.csprojAssemblyReference.cache
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.AssemblyInfoInputs.cache
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.AssemblyInfo.cs
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.csproj.CoreCompileInputs.cache
@@ -74,3 +73,16 @@ D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consum
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.dll
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.pdb
 D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.genruntimeconfig.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Thrift.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Jaeger.Communication.Thrift.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Jaeger.Core.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Jaeger.Senders.Thrift.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.FileProviders.Abstractions.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\Microsoft.Extensions.Hosting.Abstractions.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\OpenTracing.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\OpenTracing.Contrib.NetCore.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\System.Net.Http.WinHttpHandler.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\System.Threading.Tasks.Dataflow.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Net.Http.WinHttpHandler.dll
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.csproj.AssemblyReference.cache
+D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Shipment\Shipment.Consumer\obj\Debug\netcoreapp3.1\Shipment.Consumer.GeneratedMSBuildEditorConfig.editorconfig

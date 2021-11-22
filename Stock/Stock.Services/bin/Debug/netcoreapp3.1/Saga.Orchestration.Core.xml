@@ -59,6 +59,19 @@
             
             </summary>
         </member>
+        <member name="T:Saga.Orchestration.Core.Extensions.JaegerExtensions">
+            <summary>
+            Jaeger Extensions
+            </summary>
+        </member>
+        <member name="M:Saga.Orchestration.Core.Extensions.JaegerExtensions.AddJaeger(Microsoft.Extensions.DependencyInjection.IServiceCollection,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Add Jaeger
+            </summary>
+            <param name="services"></param>
+            <param name="configuration"></param>
+            <returns></returns>
+        </member>
         <member name="T:Saga.Orchestration.Core.Extensions.RegisterCoreExtensions">
             <summary>
             
@@ -247,6 +260,16 @@
         <member name="P:Saga.Orchestration.Core.Settings.Concrete.MessageBrokers.MassTransitSettings.MessageRetryCount">
             <summary>
             
+            </summary>
+        </member>
+        <member name="T:Saga.Orchestration.Core.Settings.Concrete.Monitoring.JaegerSettings">
+            <summary>
+            Jaeger Settings
+            </summary>
+        </member>
+        <member name="P:Saga.Orchestration.Core.Settings.Concrete.Monitoring.JaegerSettings.ApplicationName">
+            <summary>
+            Application Name
             </summary>
         </member>
         <member name="T:Saga.Orchestration.Core.Settings.Concrete.SwaggerSettings">

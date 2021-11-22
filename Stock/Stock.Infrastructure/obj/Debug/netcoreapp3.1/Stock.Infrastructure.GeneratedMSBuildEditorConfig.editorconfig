@@ -1,0 +1,3 @@
+is_global = true
+build_property.RootNamespace = Stock.Infrastructure
+build_property.ProjectDir = D:\WorkSpaces\Back-end\Microservices\Saga.Orchestration\Stock\Stock.Infrastructure\

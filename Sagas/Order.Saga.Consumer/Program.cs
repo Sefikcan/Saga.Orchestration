@@ -7,7 +7,6 @@ using Order.Saga.Consumer.Concrete;
 using Saga.Orchestration.Core.Constants;
 using Saga.Orchestration.Core.MessageBrokers.Concrete.RabbitMQ.MassTransit;
 using Saga.Orchestration.Core.Settings.Concrete.MessageBrokers;
-using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Order;
 using Saga.Orchestration.Shared.MessageBrokers.Consumers.Models.Sagas.Order;
 using System;
 

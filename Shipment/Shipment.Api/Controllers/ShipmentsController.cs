@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 
 namespace Shipment.Api.Controllers
 {
-    [Route("api/shipments")]
+    //[ApiVersion("1.0")]
+    [Route("api/v1/shipments")]
     [ApiController]
     public class ShipmentsController : ControllerBase
     {
@@ -24,6 +25,7 @@ namespace Shipment.Api.Controllers
         /// <param name="increaseStockRequest"></param>
         /// <returns></returns>
         [HttpPost]
+        //[MapToApiVersion("1.0")]
         [ProducesResponseType(StatusCodes.Status201Created)]
         [ProducesResponseType(StatusCodes.Status400BadRequest)]
         public async Task<IActionResult> CreateShipment([FromBody] CreateShipmentRequestModel createShipmentRequest)
